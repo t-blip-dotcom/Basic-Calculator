@@ -1,6 +1,13 @@
 import math
 print("Welcome to the World of Calculations!")
 i=1
+def get_number(prompt):
+    while True:
+        try:
+            return float(input(prompt))  # Using float to allow decimal inputs
+        except ValueError:
+            print("Invalid input! Please enter a number.")
+
 while i==1:
     print("What operation do you wish to perform: ")
     print(" 1.Division")
@@ -12,7 +19,7 @@ while i==1:
     print(" 7.Power")
     print(" 8.Square root")
     print(" 9.Exit")
-    choice=int(input("Enter your choice:"))
+    choice=get_number("Enter your choice:")
     if choice >0 and choice <=9:
 
 
@@ -20,45 +27,45 @@ while i==1:
 
 
             if choice==5 :
-                num1 = int(input("Enter first digit:"))
-                num2 = int(input("Enter the Second digit:"))
+                num1 = get_number("Enter first digit:")
+                num2 = get_number("Enter the Second digit:")
                 answer=num1+num2
                 print(f"The answer is:", answer)
             elif choice==1:
-                num1 = int(input("Enter first digit:"))
-                num2 = int(input("Enter the Second digit:"))
+                num1 = get_number("Enter first digit:")
+                num2 = get_number("Enter the Second digit:")
                 if num2 == 0:
                     print("Zero Division Error")
                 else:
                     answer=num1/num2
                     print(f"The answer is:", answer)
             elif choice==3:
-                num1 = int(input("Enter first digit:"))
-                num2 = int(input("Enter the Second digit:"))
+                num1 = get_number("Enter first digit:")
+                num2 = get_number("Enter the Second digit:")
                 answer=num1*num2
                 print(f"The answer is:", answer)
             elif choice==4:
-                num1 = int(input("Enter first digit:"))
-                num2 = int(input("Enter the Second digit:"))
+                num1 = get_number("Enter first digit:")
+                num2 = get_number("Enter the Second digit:")
                 answer=num1-num2
                 print(f"The answer is:", answer)
             elif choice==6:
-                num1 = int(input("Enter first digit:"))
-                num2 = int(input("Enter the Second digit:"))
+                num1 = get_number("Enter first digit:")
+                num2 = get_number("Enter the Second digit:")
                 answer=num1%num2
                 print(f"The answer is:", answer)
             elif choice==2:
-                num1 = int(input("Enter first digit:"))
-                num2 = int(input("Enter the Second digit:"))
+                num1 = get_number("Enter first digit:")
+                num2 = get_number("Enter the Second digit:")
                 answer=num1//num2
                 print(f"The answer is:", answer)
             elif choice==7:
-                num1 = int(input("Enter first digit:"))
-                num2 = int(input("Enter the Second digit:"))
+                num1 = get_number("Enter first digit:")
+                num2 = get_number("Enter the Second digit:")
                 answer=num1**num2
                 print(f"The answer is:", answer)
             elif choice==8:
-                num=int(input("Enter the digit:"))
+                num=get_number("Enter the digit:")
                 if num<0:
                     print("Error")
                 else:
